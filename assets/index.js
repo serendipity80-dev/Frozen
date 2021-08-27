@@ -58,15 +58,34 @@ height;
     });
 });
 
+// SET THE REMAINING TIME - COUNTDOWN
 
-// let playSong = document.getElementById('playSong');
-// let icon = document.getElementById('icon');
-// icon.onclick = function () {
-    // if(playSong.paused){
-        // playSong.play();
-        // icon.src = "./images/pause.png";
-    // } else {
-        // playSong.pause();
-        // icon.src = "./images/play.png";
-    // }
-// } 
+let deadline = new Date("Oct 31,2021 17:00:00 ").getTime();
+
+let frozen = setInterval(function () {
+
+    let now = new Date().getTime();
+    
+    let total = deadline - now;
+
+    let days = Math.floor(total / (1000*60*60*24));
+    let hours = Math.floor((total % (1000*60*60*24))/ (1000*60*60));
+    let minutes = Math.floor((total % (1000*60*60)) / (1000*60));
+    let seconds = Math.floor(( total % (1000*60))/ 1000);
+
+    document.querySelector(".days").innerHTML = days;
+    document.querySelector(".hours").innerHTML = hours;
+    document.querySelector(".minutes").innerHTML = minutes;
+    document.querySelector(".sec").innerHTML = seconds;
+
+    
+
+    if (total < 0) {
+        clearInterval(frozen);
+
+        document.querySelectorAll('#countdown').innerHTML = "EXPIRED"
+        
+    }
+
+},1000);
+
