@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Frozen</title>
+</head>
+
+<body>
+    <nav id="navigation">
+        <div class="nav">
+            <div class="nav-header">
+            
+                    <img src="./assets/images/arendelle.png" alt="Frozen" class="logo">
+                
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="links-container">
+                <ul class="links">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">elsa</a></li>
+                    <li><a href="#">anna</a></li>
+                    <li><a href="#">christof</a></li>
+                    <li><a href="#">olaf</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <nav id="navigation"> -->
+        <!-- <div class="nav"> -->
+            <!-- <div class="nav-header"> -->
+                <!-- <a href="#"> -->
+                    <!--  <img src="./images/arendelle.png" alt="Arendelle" class="logo"> --> 
+                <!-- </a> -->
+                <!-- <button class="nav-toggle"> -->
+                    <!-- <i class="fas fa-bars"></i> -->
+                <!-- </button> -->
+            <!-- </div> -->
+            <!-- <div class="links-container"> -->
+                <!-- <ul class="links"> -->
+                    <!--  <li><a href="#" class="scroll-link">home</a></li> --> 
+                    <!-- <li><a href="#" class="scroll-link">elsa</a></li> --> 
+                    <!--  <li><a href="#" class="scroll-link">anna</a></li> --> 
+                    <!--  <li><a href="#" class="scroll-link">christof</a></li> --> 
+                    <!-- < <li><a href="#" class="scroll-link">olaf</a></li> --> 
+                <!-- </ul> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </nav> -->
+
+<div class="box">
+    <span style="--i:1">
+    <img src="./assets/images/frozen.jpg" alt="Frozen">
+    </span>
+    <span style="--i:2">
+        <img src="./assets/images/frozen_elsa_anna_sisters.jpg" alt="Frozen">
+        </span>
+        <span style="--i:3">
+            <img src="./assets/images/anna_kristoff_in_frozen.jpg" alt="Frozen">
+            </span>
+            <span style="--i:4">
+                <img src="./assets/images/frozen_elsa_snow_queen_palace.jpg" alt="Frozen">
+                </span>
+                <span style="--i:5">
+                    <img src="./assets/images/anna.jpg" alt="Frozen">
+                    </span>
+                    <span style="--i:6">
+                        <img src="./assets/images/dsiney_frozen.jpg" alt="Frozen">
+                        </span>
+                        <span style="--i:7">
+                            <img src="./assets/images/frozen-2.jpg" alt="Frozen">
+                            </span>
+                            <span style="--i:8">
+                                <img src="./assets/images/elsa2.jpg" alt="Frozen">
+                                </span>
+</div>
+
+<div class="audio">
+    <img src="./assets/images/play.png" alt="play" id="icon">
+</div>
+<div class="playMe">
+    <p id="text">play me</p>
+</div>
+
+<audio id="playSong">
+    <source src="./assets/music/into-the-unknown.mp3" type="audio/mp3">
+</audio>
+
+<script>
+    let playSong = document.getElementById('playSong');
+    let icon = document.getElementById('icon');
+    let text = document.getElementById('text');
+
+    icon.onclick = function () {
+    if(playSong.paused){
+        playSong.play();
+        icon.src = "./assets/images/pause.png";
+        text.innerHTML = `pause`;
+
+    } else {
+        playSong.pause();
+        icon.src = "./assets/images/play.png";
+        text.innerHTML = `play me`;
+
+
+    }
+} 
+</script>
+<script src="./assets/index.js"></script>
+</body>
+
+</html>
